@@ -7,6 +7,10 @@ body {
     color: #ffffff;
 }
 
+a{
+    color:#88e3e3 ;
+}
+
 .container {
     display: flex;
     flex-direction: row-reverse;

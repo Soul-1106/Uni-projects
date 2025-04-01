@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Page</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png"><!-- Favicon for the page -->
+    <link href="css/style.css" rel="stylesheet"><!-- Link to external CSS file -->
+
+    <style>
+
+        /* Styles for the main container */
+        .container {
+            width: 80%;
+            margin: auto;
+            position: relative;
+            height: 100vh;
+        }
+        
+        /* Styles for the main heading */
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            margin-top: 195px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 50px;
+            z-index: 3;
+        }
+
+        /* Styles for paragraph text in the container */
+        .container p{
+            font-size: 20px;
+            margin: 30px;
+            text-align: center;
+            position: relative;
+            z-index: 3;
+        }
+
+        /* Styles for member titles */
+        .title {
+            font-size: 0.9rem;
+            color: cyan;
+        }
+
+        /* Styles for member names */
+        .name {
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        /* Styles for member descriptions */
+        .desc {
+            font-size: 0.8rem;
+            color: #bbb;
+        }
+
+        /* Styles for the team section */
+        .team {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+            margin-bottom: 0px;
+            position: relative;
+            z-index: 1;
+            align-items: flex-start;
+        }
+
+        /* Background rectangle behind team members */
+        .background-rectangle {
+            width: 1057px;
+            height: 150px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            position: absolute; 
+            top: 150px;
+            left: 425px;
+            padding-bottom: 30px;
+            z-index: 2;
+        }
+
+        /* Styles for individual team member cards */
+        .member {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        /* Hover effect for member cards */
+        .member:hover {
+            transform: scale(1.1);
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 5;
+        }
+
+        /* Styles for member images */
+        .member img {
+            width: 120px;
+            height: 120px;
+            margin-top: 20px;
+            border-radius: 20px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Hover effect for member images */
+        .member:hover img {
+            transform: scale(1.3) translateY(20px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Hidden info section for members */
+        .info {
+            display: none;
+            color: lightblue;
+            margin-top: -60px;
+        }
+
+        /* Show info on member hover */
+        .member:hover .info {
+            display: block;
+        }
+
+        /* Hide title and name on member hover */
+        .member:hover .title, .member:hover .name {
+            visibility: hidden;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-top-left">
+            <img src="assets/logo.png" alt="logo"><!-- Logo image -->
+            <p>Ocean Realm</p><!-- Site name -->
+        </div>
+        <div class="navbar">
+            <nav class="navmenu">
+                <ul>
+                    <!--Navigation menu items -->
+                    <li>
+                        <a href="home.html">Home</a>
+                        <div class="hover-card">
+                            <h3>Home</h3>
+                            <p>Start your journey with us today!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="volunteer.html"> Volunteer</a>
+                        <div class="hover-card">
+                            <h3>Volunteer</h3>
+                            <p>Join hands to protect marine life!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="table.html"> Table</a>
+                        <div class="hover-card">
+                            <h3>Data Table</h3>
+                            <p>Uncover key insights & data trends.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">About us</a>
+                        <div class="hover-card">
+                            <h3>About Us</h3>
+                            <p>Meet the team behind our mission.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="feedback.html">Feedback</a>
+                        <div class="hover-card">
+                            <h3>Feedback</h3>
+                            <p>Share your thoughts—help us improve!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Your Profile</a>
+                        <div class="hover-card">
+                            <h3>Your Profile</h3>
+                            <p>View and manage your personal space.</p>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="background-container">
+        <div class="background-rectangle"></div><!-- Background rectangle for team section -->
+        <div class="container">
+            <h1>Our Team</h1>
+            
+            <div class="team">
+                <!-- Individual team member cards -->
+                <div class="member">
+                    <img src="assets/sandaru-pic.jpg" alt="Team Member">
+                    <p class="title">Leader</p>
+                    <p class="name">Sandaru Perera</p>
+                    <div class="info"><p>Undergraduate, 19 years old, future software engineer.</p><p>Student 2</p></div>
+                </div>
+
+                <div class="member">
+                    <img src="assets/senuka-pic.jpg" alt="Team Member">
+                    <p class="title">Member</p>
+                    <p class="name">Senuka Rodrigo</p>
+                    <div class="info"><p>Undergraduate, 17 years old,  to be software engineer.</p><p>Student 4</p></div>
+                </div>
+
+                <div class="member">
+                    <img src="assets/haneef-pic.jpg" alt="Team Member">
+                    <p class="title">Member</p>
+                    <p class="name">Ahamed Haneef</p>
+                    <div class="info"><p>Undergraduate, 18 years old,  to be Cyber security professional.</p><p>Student 1</p></div>
+                </div>
+
+                <div class="member">
+                    <img src="assets/nethul-pic.jpg" alt="Team Member">
+                    <p class="title">Member</p>
+                    <p class="name">Nethul Trevor</p>
+                    <div class="info"><p>Undergraduate, 17 years old, future Cyber security specialist.</p><p>Student 3</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2025 Ocean Realm. All rights reserved.</p>
+            <p>
+                <a href="pageEditor_ST3.html">Page Editor</a> | <!-- Link to page editor & page validator -->
+                <a href="validation_ST3.html">Page validator Student 3</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
