@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Ocean Realm</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png"> <!-- Favicon -->
+    <link href="css/style.css" rel="stylesheet"> <!-- External CSS -->
+    <style>
+        .background-container {
+            display: flex; /* Center content */
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        table {
+            max-width: 70vw; /* Table width */
+            border-collapse: collapse; 
+            font-size: 18px; 
+            text-align: left; /* Align text */
+            border-radius: 8px; /* Rounded corners */
+            overflow: hidden; 
+            backdrop-filter: blur(10px); /* Blurred background */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+            margin-top: 10vh; /* Margin at the top */
+        }
+
+        th {
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Header font */
+            background-color: #027373; /* Header background */
+            color: white; 
+            padding: 20px; 
+            text-transform: uppercase; /* Uppercase text */
+        }
+
+        td {
+            padding: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Cell border */
+        }
+
+        tr:nth-child(even) {
+            background-color: #88e3e3; /* Even row background */
+            color: #000; /* Even row text color */
+        }
+
+        tr:nth-child(odd) {
+            background-color: #b6f0f0; /* Odd row background */
+            color: #000; /* Odd row text color */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-top-left">
+            <img src="assets/logo.png" alt="website logo"/> <!-- Logo -->
+            <p>Ocean Realm</p> <!-- Title -->
+        </div>
+        <div class="navbar">
+            <nav class="navmenu">
+                <ul>
+                    <li>
+                        <a href="home.html">Home</a> <!-- Home link -->
+                        <div class="hover-card">
+                            <h3>Home</h3>
+                            <p>Start your journey with us today!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="volunteer.html"> Volunteer</a> <!-- Volunteer link -->
+                        <div class="hover-card">
+                            <h3>Volunteer</h3>
+                            <p>Join hands to protect marine life!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="table.html"> Table</a> <!-- Data table link -->
+                        <div class="hover-card">
+                            <h3>Data Table</h3>
+                            <p>Uncover key insights & data trends.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">About us</a> <!-- About us link -->
+                        <div class="hover-card">
+                            <h3>About Us</h3>
+                            <p>Meet the team behind our mission.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="feedback.html">Feedback</a> <!-- Feedback link -->
+                        <div class="hover-card">
+                            <h3>Feedback</h3>
+                            <p>Share your thoughts—help us improve!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="profile.html">Your Profile</a> <!-- Profile link -->
+                        <div class="hover-card">
+                            <h3>Your Profile</h3>
+                            <p>View and manage your personal space.</p>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="background-container">
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Details</th>
+                <th>Example Species Affected</th>
+                <th>Solutions/Conservation Efforts</th>
+            </tr>
+            <tr>
+                <td>Overfishing</td>
+                <td>Depletes fish populations and disrupts ecosystems</td>
+                <td>Tuna, Cod, Sharks</td>
+                <td>Sustainable fishing regulations</td>
+            </tr>
+            <tr>
+                <td>Plastic Pollution</td>
+                <td>8 million tons enter oceans yearly, harming wildlife</td>
+                <td>Sea turtles, seabirds</td>
+                <td>Banning single-use plastics</td>
+            </tr>
+            <tr>
+                <td>Oil Spills</td>
+                <td>Coats marine life, causing poisoning & suffocation</td>
+                <td>Fish, sea otters, corals</td>
+                <td>Improved spill response & prevention</td>
+            </tr>
+            <tr>
+                <td>Coral Bleaching</td>
+                <td>Rising temperatures kill coral, affecting biodiversity</td>
+                <td>Great Barrier Reef, Red Sea</td>
+                <td>Reducing carbon emissions</td>
+            </tr>
+            <tr>
+                <td>Ocean Acidification</td>
+                <td>CO₂ lowers pH, harming shellfish & corals</td>
+                <td>Oysters, Clams, Corals</td>
+                <td>Lowering industrial emissions</td>
+            </tr>
+            <tr>
+                <td>Bycatch</td>
+                <td>Unintended capture of marine species</td>
+                <td>Dolphins, Turtles, Seabirds</td>
+                <td>Using selective fishing gear</td>
+            </tr>
+            <tr>
+                <td>Deep-Sea Mining</td>
+                <td>Destroys seafloor habitats, threatens unknown species</td>
+                <td>Deep-sea corals, Giant squid</td>
+                <td>Stricter regulations on mining</td>
+            </tr>
+            <tr>
+                <td>Habitat Destruction</td>
+                <td>Coastal development & pollution harm ecosystems</td>
+                <td>Mangroves, Seagrass beds</td>
+                <td>Marine protected areas</td>
+            </tr>
+            <tr>
+                <td>Climate Change</td>
+                <td>Warmer waters disrupt food chains and migration</td>
+                <td>Whales, Penguins, Fish</td>
+                <td>Global climate action policies</td>
+            </tr>
+            <tr>
+                <td>Illegal Fishing</td>
+                <td>Depletes resources & harms protected species</td>
+                <td>Bluefin Tuna, Sharks</td>
+                <td>Stricter law enforcement, monitoring</td>
+            </tr>
+        </table>
+    </div>
+    
+    <footer>
+        <div class="footer">
+            <p>&copy; 2025 Ocean Realm. All rights reserved.</p>
+            <p>
+                <a href="page_editor">Page Editor Student 2</a> |
+                <a href="Validation_ST2.html">Page validator Student 2</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student - provide your student name</title>
+
+    <link rel="stylesheet" href="css/pageEditor_validator.css">
+    
+
+</head>
+<body>
+    
+    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
+
+    <header>
+        <div class="logo-top-left">
+            <img src="assets/logo.png" alt="Ocean Realm Logo"/>
+            <p>Ocean Realm</p>
+        </div>
+        <div class="navbar">
+            <nav class="navmenu">
+                <ul>
+                    <li>
+                        <a href="home.html">Home</a>
+                        <div class="hover-card">
+                            <h3>Home</h3>
+                            <p>Start your journey with us today!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="volunteer.html"> Volunteer</a>
+                        <div class="hover-card">
+                            <h3>Volunteer</h3>
+                            <p>Join hands to protect marine life!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="table.html"> Table</a>
+                        <div class="hover-card">
+                            <h3>Data Table</h3>
+                            <p>Uncover key insights & data trends.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">About us</a>
+                        <div class="hover-card">
+                            <h3>About Us</h3>
+                            <p>Meet the team behind our mission.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Feedback</a>
+                        <div class="hover-card">
+                            <h3>Feedback</h3>
+                            <p>Share your thoughts—help us improve!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Your Profile</a>
+                        <div class="hover-card">
+                            <h3>Your Profile</h3>
+                            <p>View and manage your personal space.</p>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+
+    <div class="background-container">
+        <section class="stud">
+            <h2>H. I. A. Haneef (20231259), student 1</h2>
+        </section>
+    
+        <div class="container">
+            <!-- Main content area -->
+            <main>
+
+                <!-- Update those first three sections for the pages you were responsible to implement -->
+
+                <section>
+                    <h2 id="splash">Splash Page</h2>
+                        <h3>Technical Description</h3>
+                            <p>This splash page serves as an introduction to the Ocean Realm website, displaying a visually appealing background, an animated loading effect, and an automatic redirection to the main content (home.html) after 4 seconds. The design focuses on user engagement while ensuring smooth navigation.
+
+                                The meta tag with http-equiv="refresh" is used to automatically redirect users to home.html after 4 seconds, ensuring a seamless transition. The structure of the page is built around several key div elements. The .image-container acts as the background, ensuring a full-screen ocean-themed image, while .left contains the main content, using a semi-transparent overlay to improve text readability.
+                                
+                                A fixed-position .logo-top-left div displays the project’s branding, making sure it remains visible regardless of scrolling. The .loading section features animated dots, creating a visual cue that the page is transitioning. Finally, the .page-editor-container provides a button linking to the Page Editor, allowing for content updates.
+                                
+                                From a styling perspective, the .image-container ensures that the background covers the entire screen using background-size: cover, preventing distortion. The .left section is styled with position: fixed, width: 50%, and a background-color: rgba(0, 0, 0, 0.5), providing a dark overlay that enhances text contrast.
+                                
+                                Typography is handled using the imported Poppins font, which gives the page a clean and modern appearance. Text elements (h1, h2, h3, p) are centrally aligned for an organized layout, with text-shadow applied to enhance readability.
+                                
+                                For user engagement, animations are incorporated. The @keyframes fadeIn effect makes the text appear gradually, while @keyframes jump animates the loading dots to give users a visual indication of transition. Interactive elements, such as the .page-editor-container a button, have a hover effect that changes background and text colors, improving user interaction.</p> 
+                        
+                        <h3>Accessibility</h3>
+                            <p>Accessibility is a key consideration in the design of this splash page. To enhance contrast and readability, a semi-transparent black overlay (rgba(0, 0, 0, 0.5)) is used behind the text. This ensures that the white text remains highly readable against the background image. Additionally, text-shadow and high-contrast colors are applied to further improve visibility.
+
+                                The page is designed to be scalable and responsive, using vh, vw, and rem units instead of fixed pixel values. This allows elements to adjust dynamically across different screen sizes and devices.
+                                
+                                For keyboard navigation and focus, all interactive elements, such as the Page Editor button, are styled to provide clear visual feedback when hovered or focused. This ensures that users navigating with a keyboard or assistive technology can easily identify clickable elements.
+                                
+                                Finally, animations are kept subtle to prevent discomfort for users sensitive to motion. While the loading dots animate, they do so in a slow and controlled manner. The fade-in effects for text also ensure that content remains easy to read without abrupt transitions.
+                                
+                                By implementing these techniques, the splash page offers an engaging, accessible, and user-friendly experience while maintaining smooth functionality.</p>
+                        
+                        <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                            <p><a href="validation_ST1.html#splashVal">Link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                        <h3>Link to the page</h3>
+                            <p><a href="splash.html">Link to the actual page you describe.</a></p>
+                </section>
+
+                <section>
+                    <h2 id="volunteer">Volunteer Page</h2>
+                        <h3>Technical Description</h3>
+                        <p>The volunteer page is structured using a combination of <code>&lt;html&gt;</code> and <code>&lt;css&gt;</code> techniques that enhance both functionality and design. The HTML document begins with the <code>&lt;!DOCTYPE html&gt;</code> declaration, which defines the document type and version of HTML being used. The <code>&lt;html&gt;</code> tag encompasses the entire content of the page, while the <code>&lt;head&gt;</code> section contains metadata, including the character set, viewport settings for responsive design, and links to external resources like stylesheets and icons. The <code>&lt;title&gt;</code> tag provides a concise description of the page, which is displayed in the browser tab.
+
+                            The main content of the page is organized within semantic HTML elements, such as <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code>. The <code>&lt;header&gt;</code> contains the site logo and navigation menu, which is structured using an unordered list <code>&lt;ul&gt;</code>. Each navigation item is wrapped in a list item <code>&lt;li&gt;</code>, providing a clear and accessible way for users to navigate the site. The use of <code>&lt;div&gt;</code> elements helps to group related content, such as the volunteer cards and review sections, enhancing the layout and organization of the page.
+                            
+                            <code>CSS</code> is employed to style the page, utilizing properties like flexbox for layout management. The <code>.card-container</code> class uses <code>display: flex</code> to create a responsive layout for the volunteer cards, allowing them to adjust based on the screen size. The <code>gap</code> property provides spacing between the cards, while <code>border-radius</code> and <code>box-shadow</code> enhance the visual appeal by creating rounded corners and subtle depth. Background images for the volunteer cards are set using <code>background-image</code>, <code>background-size</code>, and <code>background-position</code>, ensuring that the images cover the card area effectively.
+                            
+                            Hover effects are implemented using the <code>:hover</code> pseudo-class, which changes the appearance of elements when the user hovers over them. For instance, the <code>.volunteer-card:hover .card-info</code> rule reveals additional information about the volunteer program, enhancing interactivity. The use of transitions, such as <code>transition: right 0.3s ease-in-out</code>, provides smooth animations, improving user experience.
+                            </p>
+                        <h3>Accessibility</h3>
+                            <p>Accessibility is a crucial aspect of web design, and several techniques have been implemented on this volunteer page to ensure it is usable for all individuals, including those with disabilities. The use of semantic HTML elements, such as <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code>, helps screen readers understand the structure and hierarchy of the content, making navigation easier for users relying on assistive technologies. The navigation menu includes descriptive text within the <code>&lt;a&gt;</code> tags, allowing users to understand the purpose of each link clearly.
+
+                                Additionally, the page employs appropriate contrast ratios between text and background colors, ensuring readability for users with visual impairments. The buttons, such as those for submitting feedback, are clearly labeled with text, providing context for their function. The use of <code>aria-labels</code> or <code>role</code> attributes could further enhance accessibility, although they are not explicitly included in the provided code.
+                                
+                                The inclusion of <code>alt</code> text for images, such as the logo, ensures that users who cannot see the images can still understand their purpose. The layout is designed to be responsive, allowing users on various devices to access the content without difficulty. Overall, these accessibility considerations aim to create an inclusive experience for all users, promoting equal access to information and functionality on the volunteer page.
+                                .</p>
+
+                        <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                            <p><a href="validation_ST1.html#volunteerVal">Link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                            
+                        <h3>Link to the page</h3>
+                            <p><a href="volunteer.html">Link to the actual page you describe.</a></p>
+                </section>
+
+                <section>
+                    <h2 id="content">Content Page</h2>
+                        <h3>Technical Description</h3>
+                            <p>The "Careers in Marine Science" page is designed using a combination of <code>HTML</code> and <code>CSS</code> techniques that enhance both functionality and aesthetics. The document begins with the <code>&lt;!DOCTYPE html&gt;</code> declaration, which specifies the HTML version being used. The <code>&lt;html&gt;</code> tag wraps the entire content, while the <code>&lt;head&gt;</code> section includes essential metadata, such as the character set, viewport settings for responsive design, and links to external stylesheets and icons. The <code>&lt;title&gt;</code> tag provides a clear description of the page, which is displayed in the browser tab.
+
+                                The structure of the page is organized using semantic HTML elements, including <code>&lt;header&gt;</code>, <code>&lt;div&gt;</code>, and <code>&lt;footer&gt;</code>. The <code>&lt;header&gt;</code> contains the site logo and a navigation menu, structured with an unordered list (<code>&lt;ul&gt;</code>) for easy navigation. Each navigation item is wrapped in a list item (<code>&lt;li&gt;</code>), which improves accessibility and usability for users. The main content is encapsulated within a <code>&lt;div class="container"&gt;</code>, which serves as a flexible container for the various sections of the page.
+                                
+                                <code>CSS</code> is utilized to style the page, employing properties like flexbox for layout management. The <code>.container</code> class uses <code>display: flex</code> and <code>flex-direction: column</code> to create a vertical layout, ensuring that the content is centered and well-organized. The background color is set to a semi-transparent black (<code>rgba(0, 0, 0, 0.6)</code>), which enhances readability against the white text. Headings are styled with distinct colors and sizes to create a clear hierarchy, using properties like <code>color</code>, <code>font-size</code>, and <code>text-align</code>.
+                                
+                                Images are included with responsive design in mind, using <code>max-width: 50%</code> to ensure they scale appropriately on different devices. The <code>.quote</code> class is styled with italic text and a light color to differentiate quotes from the main content, enhancing visual interest. The "back to top" button is designed with a <code>fixed position</code>, ensuring it remains visible as users scroll. It features a gradient background and hover effects that improve interactivity, utilizing <code>CSS</code> transitions for smooth animations.
+                                </p>
+                        <h3>Accessibility</h3>
+                            <p>Accessibility is a fundamental consideration in the design of the "Careers in Marine Science" page, ensuring that all users, including those with disabilities, can navigate and understand the content. The use of semantic HTML elements, such as <code>&lt;header&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, and <code>&lt;footer&gt;</code>, provides a clear structure that assists screen readers in conveying the hierarchy and organization of the content. The navigation menu is built using an unordered list, which is a standard practice for creating accessible navigation.
+
+                                Color contrast is carefully considered, with white text on a dark background to ensure readability for users with visual impairments. The images include descriptive <code>alt</code> attributes, allowing users who rely on screen readers to understand the content and context of the images. The "back to top" button is clearly labeled with an upward arrow, providing a straightforward function for users to return to the top of the page.
+                                
+                                The page also employs responsive design principles, ensuring that content is accessible on various devices, including smartphones and tablets. This adaptability is crucial for users who may have different accessibility needs. Overall, these accessibility features aim to create an inclusive experience, allowing all users to engage with the information presented on the page effectively.
+                                </p>
+
+                        <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                            <p><a href="validation_ST1.html#contentVal">Link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                            
+                        <h3>Link to the page</h3>
+                            <p><a href="content_ST1.html">Link to the actual page you describe.</a></p>
+                </section>
+
+                <section>
+                    <h2 id="challenge"> Challenges and Lessons Learned</h2>
+                        <p>During the implementation process of a webpage utilizing HTML and CSS, I encountered several challenges, particularly with positioning the divs and dealing with overlapping issues. Initially, I struggled to align the divs correctly, which resulted in a cluttered and unorganized layout. The overlapping elements made the webpage look chaotic and unprofessional. To resolve these issues, I explored various CSS properties such as position, float, and flexbox. By experimenting with these properties, I discovered that using flexbox provided a more flexible and efficient way to align and distribute space among the divs. Additionally, I learned to use z-index to manage the stacking order of overlapping elements, ensuring that each div appeared in the correct layer. Through this process, I gained a deeper understanding of CSS layout techniques and the importance of planning the structure of a webpage before diving into the code. This experience taught me the value of persistence and experimentation in problem-solving, and it highlighted the significance of continuous learning and adapting to new tools and methods in web development.</p> 
+                </section>
+
+                <section>
+                    <h2 id="compliance"> Compliance</h2>
+                        <p>According to the Janet regulations governing web page publication.The web pages i have made are not used for illegal or inappropriate activities and striclty follows educational,institutional objectives and it is prohibited from commercial use unless explicitly permitted.There have been no personal data collection has been used in the web pages creation therefore it doesn't fall under any personal information leaks,No promotion of hate speech or discrimination is present in the content of the page. These webpages are accessible by all users.Features like alt text for images, keyboard navigation, and screen reader compatibility are present.although most of the requirment for it to be complient to the Janet regulations governing web page publication but there can be some modifications be made for it to fully comply with the regulations such as Users must be able to zoom in up to 200% without losing functionality.
+                            Websites should be responsive to different screen sizes (desktop, mobile, tablet) and some more are not present.  </p> 
+
+                        
+                </section>
+
+                <section>
+                    <h2 id="ref">References</h2>
+                    <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
+                        <ul class="ref">
+                            <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 7 March 2025).</li>
+                            <li>Duckett, J., 2011. HTML and CSS: Design and Build Websites,<i>John Willey&Sons. Inc. Indianappolis.</i></li>
+                            <li>Meloni, J.C. (2012) <em>Sams Teach Yourself HTML, CSS, and JavaScript All in One</em>. Indianapolis: Pearson Education. Available at: <span>ISBN-13: 978-0-672-33332-3</span>.</li>
+                            <li>Unsplash (2025) <i>Unsplash.</i> Available at: <a href="https://unsplash.com">https://unsplash.com</a> (Last accessed: 9 March 2025).</li>
+                            <li>Pexels (2025) <i>Pexels.</i> Available at: <a href="https://www.pexels.com/">https://www.pexels.com/</a> (Last accessed: 9 March 2025).</li>
+                        </ul>
+                </section>
+
+                <p class="top"><a href="#top">Go top</a></p>
+            </main>
+
+            <!-- Sidebar area -->
+            <aside>
+                <h3>Core pages developed:</h3>
+
+            <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+                <ul class="top-level-ul">
+                    <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
+                    <li>Student 1</li>
+                        <ul> 
+                            <li><a href="#splash">Splash page</a></li>
+                            <li><a href="#volunteer">Volunteer page</a></li>
+                            <li><a href="#content">Content page</a></li>
+                        </ul>
+                    <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                    <li><a href="#compliance">Compliance</a></li>
+                    <li><a href="#ref">References</a></li>
+                </ul>
+            </aside>
+        </div>
+        
+        
+    </div>
+    <footer>
+        <div class="footer">
+            <p>&copy; 2025 Ocean Realm. All rights reserved.</p>
+            <p>
+                <a href="pageEditor_ST1.html">Page Editor</a> |
+                <a href="validation_ST1.html">Page Validator</a>
+            </p>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

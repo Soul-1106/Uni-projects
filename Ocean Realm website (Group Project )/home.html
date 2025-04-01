@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Ocean Realm</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png"> <!-- Favicon -->
+    <link href="css/style.css" rel="stylesheet"> <!-- External CSS -->
+    <style>
+        body{
+            max-height: fit-content; /* Fit content height */
+        }
+
+        .home-text {
+            position: relative;
+            left: 2.5vw;
+            top: 60vh;
+            color: white;
+            font-size: 22px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 4vh 2vw;
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            width: 45vw;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            gap: 4vh;
+        }
+        .background-container {
+            display: block;
+            margin-bottom: 0;
+            min-height: auto;
+        }
+
+        .logo-top-left {
+            position: absolute;
+            z-index: 1000;
+            transform: translateX(-50%);
+            backdrop-filter: blur(20px);
+        }
+
+        .logo-top-left p {
+            top: 26vh;
+            left: 20vw;
+            font-size: 100px;
+            font-weight: 700;
+            width: 500px;
+            color: #00eaff; 
+            text-shadow: 0 0 10px #13818b, 0 0 20px #00eaff, 0 0 40px #00eaff;
+        }
+
+        .logo-top-left img {
+            top: 25vh;
+            left: 2vw;
+            width: 15vw;
+            height: 25vh;
+            border-radius: 50%;
+            object-fit: contain;
+        }
+
+        .content-container {
+            position: relative;
+            top: -31vh;
+            left: 50vw;
+            color: white;
+            font-size: 22px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 4vh 2vw;
+            margin: 10px;
+            border-radius: 20px;
+            backdrop-filter: blur(12px);
+            width: 45vw;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .content-container::after {
+            content: '➜'; 
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .content-container:hover {
+            transform: scale(1.02);
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        .content-container:hover::after {
+            opacity: 1;
+            transform: translateY(-50%) translateX(5px); /* Moves arrow slightly to the right */
+        }
+
+        .content-tile-1 {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .content-tile-1 img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .content-tile-1 img:hover {
+            transform: scale(1.1); /* Enlarge image on hover */
+        }
+
+        .content-text h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .content-text p {
+            font-size: 18px;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        .home-text h1 {
+            font-size: 36px;
+            font-weight: bold;
+            font-family: Georgia;
+            margin: 0;
+        }
+
+        .home-text p {
+            position: relative;
+            font-size: 20px;
+            line-height: 1.6;
+            padding-bottom: 20px;
+        }
+
+        a{
+            text-decoration: none; /* No underline for links */
+            color: white; /* Link color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-top-left">
+            <img src="assets/logo.png" alt="website logo"/> <!-- Logo image -->
+            <p>Ocean Realm</p> <!-- Website title -->
+        </div>
+        <div class="navbar">
+            <nav class="navmenu">
+                <ul>
+                    <li>
+                        <a href="home.html">Home</a> <!-- Link to home page -->
+                        <div class="hover-card">
+                            <h3>Home</h3>
+                            <p>Start your journey with us today!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="volunteer.html"> Volunteer</a> <!-- Link to volunteer page -->
+                        <div class="hover-card">
+                            <h3>Volunteer</h3>
+                            <p>Join hands to protect marine life!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="table.html"> Table</a> <!-- Link to data table page -->
+                        <div class="hover-card">
+                            <h3>Data Table</h3>
+                            <p>Uncover key insights & data trends.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">About us</a> <!-- Link to about us page -->
+                        <div class="hover-card">
+                            <h3>About Us</h3>
+                            <p>Meet the team behind our mission.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#feedback.html">Feedback</a> <!-- Link to feedback page -->
+                        <div class="hover-card">
+                            <h3>Feedback</h3>
+                            <p>Share your thoughts—help us improve!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="profile.html">Your Profile</a> <!-- Link to user profile page -->
+                        <div class="hover-card">
+                            <h3>Your Profile</h3>
+                            <p>View and manage your personal space.</p>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="home-page">
+        <div class="background-container">
+            <div class="home-text">
+                <h1>Discover, Explore, Protect. </h1> <!-- Main heading -->
+                <p>At Ocean Realm, we bring you closer to the beauty beneath the surface. From breathtaking marine life to conservation efforts, we’re here to inspire curiosity and action. Whether you're a passionate explorer, a conservationist, or simply an ocean lover, join us in celebrating and protecting the blue heart of our planet. Our mission aligns with UN Sustainable Development Goal 14 (Life Below Water), striving to protect marine biodiversity and promote conservation efforts.</p>
+            </div>
+            
+            <div class="content-container">
+                <a href="content_ST2.html">
+                    <div class="content-tile-1">
+                        <img src="assets/marine-biodiversity.jpeg" alt="Diver exploring coral reefs"> <!-- Image for marine biodiversity -->
+                        <div class="content-text">
+                            <h2>Marine Biodiversity</h2> <!-- Title for marine biodiversity -->
+                            <p>Dive into the depths of the ocean and uncover the vibrant and diverse ecosystems that make up marine life. Explore the wonders of coral reefs and underwater habitats.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="content-container">
+                <a href="content_ST1.html">
+                    <div class="content-tile-1">
+                        <img src="assets/content-ST1-image-2.jpg" alt="Diver exploring coral reefs"> <!-- Image for careers in marine science -->
+                        <div class="content-text">
+                            <h2>Careers in Marine Science</h2> <!-- Title for careers section -->
+                            <p>Explore the exciting and impactful career opportunities within marine science. From research to conservation, discover how you can contribute to the health of our oceans.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="content-container">
+                <a href="content_ST3.html">
+                    <div class="content-tile-1">
+                        <img src="assets/pexels-belle-co-99483-847393.jpg" alt="Diver exploring coral reefs"> <!-- Image for deep sea exploration -->
+                        <div class="content-text">
+                            <h2>The Deep Sea: Unexplored Worlds</h2> <!-- Title for deep sea section -->
+                            <p>Journey into the mysteries of the deep sea, where hidden ecosystems and species remain largely unexplored. Experience the unknown wonders beneath the ocean’s surface.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="content-container">
+                <a href="content_ST2.html">
+                    <div class="content-tile-1">
+                        <img src="assets/content-ST1-image-3.jpg" alt="Diver exploring coral reefs"> <!-- Image for marine biodiversity -->
+                        <div class="content-text">
+                            <h2>Marine Biodiversity</h2> <!-- Title for marine biodiversity -->
+                            <p>Embark on a journey to discover the wonders of the ocean. Dive into our world and explore marine life, coral reefs, and underwater ecosystems.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+</body>

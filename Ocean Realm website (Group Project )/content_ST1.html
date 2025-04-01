@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character set and responsive design -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Title and favicon for the webpage -->
+    <title>Careers in Marine Science - Ocean Realm</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+    
+    <!-- Link to external CSS stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        /* Styles for the main container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+            margin: 8%;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+        }
+
+        /* Styles for main headings */
+        h1 {
+            color: #6ad0e4;
+            text-align: center;
+            padding: 30px;
+            font-size: 50px;
+        }
+
+        /* Styles for subheadings */
+        h2 {
+            padding-left: 30px;
+            color: #3dc3cd;
+            padding-bottom: 30px;
+            font-size: 35px;
+        }
+
+        /* Styles for paragraph text */
+        .container p {
+            color: white;
+            font-size: 20px;
+            line-height: 1.6;
+            padding-bottom: 30px;
+            padding-left: 30px;
+        }
+
+        /* Styles for unordered lists */
+        ul {
+            padding-left: 80px;
+            padding-bottom: 20px;
+        }
+
+        /* Styles for list items */
+        li {
+            padding-bottom: 15px;
+            font-size: 20px;
+        }
+
+        /* Styles for image containers */
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Styles for images within the image container */
+        .image-container img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        /* Styles for quotes */
+        .quote {
+            font-style: italic;
+            color: #bae1f7;
+            text-align: center;
+            margin: 30px;
+            font-size: 20px;
+        }
+
+        /* Styles for the back-to-top button */
+        .top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #10efff, #094891);
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            z-index: 9999;
+            font-size: 40px;
+        }
+
+        /* Styles for the hover effect on the back-to-top button */
+        .top::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease-in-out;
+        }
+
+        /* Hover effect for the back-to-top button */
+        .top:hover::before {
+            left: 100%;
+        }
+
+        /* Scale and shadow effect on hover */
+        .top:hover {
+            transform: scale(1.08);
+            box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <!-- Logo and navigation menu -->
+        <div class="logo-top-left">
+            <img src="assets/logo.png" alt="Ocean Realm Logo"/>
+            <p>Ocean Realm</p>
+        </div>
+        <div class="navbar">
+            <nav class="navmenu">
+                <ul>
+                    <!-- Navigation links with hover cards -->
+                    <li>
+                        <a href="home.html">Home</a>
+                        <div class="hover-card">
+                            <h3>Home</h3>
+                            <p>Start your journey with us today!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="volunteer.html"> Volunteer</a>
+                        <div class="hover-card">
+                            <h3>Volunteer</h3>
+                            <p>Join hands to protect marine life!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="table.html"> Table</a>
+                        <div class="hover-card">
+                            <h3>Data Table</h3>
+                            <p>Uncover key insights & data trends.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">About us</a>
+                        <div class="hover-card">
+                            <h3>About Us</h3>
+                            <p>Meet the team behind our mission.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="feedback.html">Feedback</a>
+                        <div class="hover-card">
+                            <h3>Feedback</h3>
+                            <p>Share your thoughts—help us improve!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="profile.html">Your Profile</a>
+                        <div class="hover-card">
+                            <h3>Your Profile</h3>
+                            <p>View and manage your personal space.</p>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Back-to-top button -->
+    <p class="top"><a href="#top">↑</a></p>
+    
+    <div class="background-container">
+        <div class="container">
+            <!-- Main content area -->
+            <h1>Careers in Marine Science</h1>
+
+            <!-- Inspirational quote -->
+            <div class="quote">"The ocean is our planet’s last great frontier—each wave holds a new discovery." – Dr.
+                Olivia Carter, Marine Biologist</div>
+
+            <!-- Introduction to marine science -->
+            <p>Marine science is a vast and exciting field that explores the ocean and its many ecosystems. Careers in
+                marine science involve studying marine organisms, oceanic environments, and the impact of human
+                activities on the ocean. Professionals in this field work in a variety of settings, including research
+                institutions, government agencies, conservation organizations, and private industries.</p>
+
+            <!-- Image related to marine science -->
+            <div class="image-container">
+                <img src="assets/content-ST1-image-1.jpg" alt="Marine Science Exploration">
+            </div>
+
+            <!-- Section on fields of marine science -->
+            <h2>Fields of Marine Science</h2>
+
+            <h3>1. Marine Biology </h3>
+            <p>Focuses on studying marine organisms, from microscopic plankton to large marine mammals.</p>
+            <div class="quote">"Every creature in the ocean has a story to tell—it's up to us to listen." – Dr. Emma
+                Hayes</div>
+
+            <div class="image-container">
+                <img src="assets/content-ST1-image-2.jpg" alt="Marine Biologist at Work">
+            </div>
+
+            <h3>2. Oceanography </h3>
+            <p>Examines physical, chemical, geological, and biological processes in the ocean.</p>
+            <div class="quote">"To understand the ocean is to understand the heartbeat of our planet." – Dr. James
+                O’Malley</div>
+
+            <h3>3. Marine Conservation and Environmental Science </h3>
+            <p>Focuses on protecting marine biodiversity and addressing issues like climate change, pollution, and
+                habitat destruction.</p>
+            <div class="quote">"Protecting the ocean means protecting our future." – Sylvia Earle</div>
+
+            <div class="image-container">
+                <img src="assets/content-ST1-image-3.jpg" alt="Marine Conservationist">
+            </div>
+
+            <h3>4. Marine Engineering and Technology </h3>
+            <p>Involves designing and building equipment for underwater exploration, such as submersibles and ocean
+                monitoring systems.</p>
+
+            <h3>5. Aquaculture and Fisheries Science </h3>
+            <p>Focuses on sustainable seafood production and managing fish populations.</p>
+
+            <h3>6. Marine Policy and Law </h3>
+            <p>Involves creating and enforcing policies to regulate marine resources and protect the ocean.</p>
+
+            <!-- Section on career opportunities -->
+            <h2>Career Opportunities</h2>
+            <p>There are many exciting career paths in marine science, including:</p>
+            <ul>
+                <li>Marine Biologist – Studies marine organisms and ecosystems.</li>
+                <li>Oceanographer – Researches ocean currents, chemistry, and climate interactions.</li>
+                <li>Marine Conservationist – Works to protect marine life and habitats.</li>
+                <li>Aquatic Veterinarian – Provides healthcare for marine animals.</li>
+                <li>Fisheries Scientist – Manages and studies fish populations.</li>
+                <li>Marine Archaeologist – Studies underwater cultural heritage and shipwrecks.</li>
+                <li>Marine Engineer – Designs equipment for ocean exploration.</li>
+                <li>Environmental Consultant – Advises industries on marine sustainability.</li>
+                <li>Coastal Resource Manager – Develops strategies for managing coastal ecosystems.</li>
+                <li>Marine Policy Specialist – Works on laws and regulations for ocean conservation.</li>
+            </ul>
+
+            <!-- Section on required education and skills -->
+            <h2>Required Education and Skills</h2>
+            <p>Most marine science careers require a strong educational background in science and research. A bachelor's
+                degree is typically needed for entry-level jobs, while advanced positions may require a master's or
+                Ph.D.</p>
+
+            <h3>Key skills for marine scientists:</h3>
+            <ul>
+                <li>Strong analytical and research skills</li>
+                <li>SCUBA diving certification for fieldwork</li>
+                <li>Data analysis and statistical proficiency</li>
+                <li>Problem-solving and critical thinking</li>
+                <li>Communication and teamwork skills</li>
+            </ul>
+
+            <!-- Section on potential workplaces -->
+            <h2>Where to Work </h2>
+            <p>Marine scientists find employment in various sectors, including:</p>
+            <ul>
+                <li>Universities and research institutions</li>
+                <li>Government agencies (NOAA, EPA, etc.)</li>
+                <li>Environmental non-profits and NGOs</li>
+                <li>Private sector (energy, biotechnology, and aquaculture companies)</li>
+                <li>Marine parks, aquariums, and museums</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="footer">
+            <p>&copy; 2025 Ocean Realm. All rights reserved.</p>
+            <p><a href="pageEditor_ST1.html">Page Editor</a> | <a href="validation_ST1.html">Page Validator</a></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

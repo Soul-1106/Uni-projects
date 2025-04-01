@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student - provide your student name</title>
+
+    <link rel="stylesheet" href="css/pageEditor_validator.css"> <!-- External CSS link -->
+
+</head>
+<body>
+    
+    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
+
+    <header>
+        <div class="logo-top-left">
+            <img src="assets/logo.png" alt="website logo"/>
+            <p>Ocean Realm</p>
+        </div>
+        <div class="navbar">
+            <nav class="navmenu">
+                <ul>
+                    <li>
+                        <a href="home.html">Home</a>
+                        <div class="hover-card">
+                            <h3>Home</h3>
+                            <p>Start your journey with us today!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="volunteer.html"> Volunteer</a>
+                        <div class="hover-card">
+                            <h3>Volunteer</h3>
+                            <p>Join hands to protect marine life!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="table.html"> Table</a>
+                        <div class="hover-card">
+                            <h3>Data Table</h3>
+                            <p>Uncover key insights & data trends.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">About us</a>
+                        <div class="hover-card">
+                            <h3>About Us</h3>
+                            <p>Meet the team behind our mission.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#feedback.html">Feedback</a>
+                        <div class="hover-card">
+                            <h3>Feedback</h3>
+                            <p>Share your thoughts—help us improve!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="profile.html">Your Profile</a>
+                        <div class="hover-card">
+                            <h3>Your Profile</h3>
+                            <p>View and manage your personal space.</p>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <div class="background-container">
+
+    <section class="stud">
+        <h2>Sandaru Perera, student 2</h2>
+    </section>
+
+    <div class="container">
+        <!-- Main content area -->
+        <main>
+
+            <section id="home">
+                <h2>Home page</h2>
+                    <h3>Technical Description</h3>
+                        <p>The homepage is structured using fundamental HTML elements, such as <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;div&gt;</code>, to create a clear and organized layout. The <code>&lt;header&gt;</code> contains the logo and navigation bar, with the logo positioned using absolute positioning to ensure it stays fixed at the top-left of the page. The <code>&lt;nav&gt;</code> holds an unordered list (<code>&lt;ul&gt;</code>) of navigation links that are styled for a clean horizontal layout. Each navigation link has a hover effect that provides additional information via a <code>&lt;div&gt;</code> with the class <code>.hover-card</code>, enhancing user interaction. The main content of the page is placed within a <code>&lt;section&gt;</code> with the id="home-page", which holds multiple content blocks represented by <code>.content-container</code> <code>&lt;div&gt;</code>s. These containers house an image, heading, and description, each styled to stand out against the background and draw attention to the page's key topics such as marine biodiversity and career opportunities in marine science.</p>
+
+                        <p>The CSS uses several techniques to ensure the page is both functional and visually appealing. Flexbox is used in the navigation bar to space out links evenly, and positioning properties like <code>position: absolute</code> and <code>position: relative</code> are used for precise control over the layout of elements like the logo and content containers. For the content sections, a combination of <code>background</code>, <code>backdrop-filter</code>, and <code>box-shadow</code> creates visually engaging overlays and depth, while <code>transform: scale(1.02)</code> on hover adds interactivity to the <code>.content-container</code> elements. Media queries are applied to ensure responsiveness, making the layout adapt to various screen sizes. The use of CSS transitions and hover effects improves the user experience by adding smooth animations, such as enlarging images and displaying arrows on hover.</p>
+                    
+                    <h3>Accessibility</h3>
+                    <p>
+                        The homepage has been designed with accessibility in mind. Semantic HTML tags like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;section&gt;</code> help screen readers interpret the page structure. Interactive elements are accessible via keyboard, and text links have clear and descriptive labels for easy navigation. The color contrast follows WCAG guidelines to ensure readability for users with visual impairments, and images are provided with alternative text descriptions for those relying on screen readers. These features enhance the page's inclusivity, offering a positive experience for all users.
+                    </p>
+                    <h3>Link to the validation page</h3>
+                        <p><a href="validation_ST2.html#home">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> 
+
+                    <h3>Link to the page</h3>
+                        <p><a href="home.html">Include a link to the actual page you describe.</a></p>
+            </section>
+
+            <section id="table">
+                <h2>Table Page</h2>
+                    <h3>Technical Description</h3>
+                    <p>The table page is structured using fundamental HTML elements like &lt;header&gt;, &lt;nav&gt;, and &lt;table&gt; to create a clear, readable layout. The &lt;header&gt; contains the logo and navigation links, structured using an unordered list &lt;ul&gt;. The table itself is created using the &lt;table&gt;, &lt;th&gt;, and &lt;td&gt; tags to define rows and columns. Each row in the table represents an environmental issue with corresponding details and solutions. The &lt;th&gt; tags are used for the header row, while &lt;td&gt; tags define the content for each issue. To improve readability, the rows alternate colors using the nth-child CSS selector, providing a clear distinction between different entries. The &lt;div&gt; with the class .background-container wraps the table, applying additional styles for alignment and presentation.</p>
+
+                    <p>CSS properties such as box-shadow, border-radius, and backdrop-filter are used to enhance the table's design, giving it a clean and modern appearance. Flexbox is used for layout management, ensuring the table remains centered on the page. The border-collapse property is applied to eliminate extra space between table cells, while border-bottom in the &lt;td&gt; tags ensures row separation. Hover effects are applied to table rows using the transform: scale(1.02) property, slightly enlarging them on hover for a more interactive user experience. The table's responsiveness is achieved through media queries, ensuring the page adjusts properly to various screen sizes.</p>
+                    
+
+                    <h3>Accessibility</h3>
+                    <p>The table page uses semantic HTML elements like &lt;header&gt;, &lt;nav&gt;, and &lt;table&gt; to ensure a clear structure. Interactive elements like navigation links are easy to navigate, with descriptions provided in &lt;div class="hover-card"&gt; for screen readers. The table uses &lt;th&gt; and &lt;td&gt; for better data readability, and all images have alt attributes for accessibility. Color contrast and responsive design are implemented to improve accessibility for users with visual impairments and on different screen sizes.</p>
+
+                    <p>Additionally, the page supports keyboard navigation and ensures that all interactive elements are usable without a mouse, offering inclusivity for users relying on assistive technologies.</p>
+                    
+
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST2.html#table">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p>
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="table.html">Include a link to the actual page you describe.</a></p>
+            </section>
+
+            <section id="content">
+                <h2>Content Page</h2>
+                    <h3>Technical Description</h3>
+                    <p>This webpage utilizes semantic HTML elements like &lt;header&gt;, &lt;nav&gt;, &lt;section&gt;, and &lt;footer&gt;, which not only provide a clean and organized structure but also enhance SEO and accessibility. The navigation bar is composed of an unordered list (&lt;ul&gt;) with anchor links (&lt;a&gt;) for easy navigation, and each menu item includes a hover effect for user interaction. All images include descriptive &lt;alt&gt; text to improve accessibility for screen readers. Flexbox layout ensures responsiveness, adjusting content for various screen sizes. A viewport meta tag is used for mobile optimization, and clear headings and lists improve readability. The color contrast and design have been considered for better visual accessibility.</p>
+
+
+                    <h3>Accessibility</h3>
+                    <p>This page uses semantic HTML elements like &lt;header&gt;, &lt;nav&gt;, and &lt;section&gt; to ensure proper structure. The navigation menu includes accessible links with hover descriptions provided in &lt;div class="hover-card"&gt; for better screen reader support. Images use descriptive alt text, ensuring clarity for visually impaired users. The content is organized into clear sections, and lists are formatted using &lt;ul&gt; and &lt;li&gt; elements to enhance readability. The design also ensures sufficient color contrast and responsive layouts for accessibility on all devices.</p>
+
+                    <p>Interactive elements, including links and images, are easily navigable with a keyboard, offering inclusivity for users relying on assistive technologies. The footer provides relevant links with clear descriptions for additional navigation.</p>
+                    
+
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST2.html#content">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="content_ST2.html">Include a link to the actual page you describe.</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge"> Challenges and Lessons Learned</h2>
+                <p>Building this website presented challenges in responsive design, cross-browser compatibility, and performance optimization. Ensuring the site worked smoothly across different screen sizes required extensive use of CSS media queries and flexbox. Cross-browser issues were resolved by using widely supported CSS properties and thorough testing. To improve performance, I compressed images and used lazy loading techniques. I also focused on accessibility by adding proper alt text and ensuring keyboard navigation. These challenges taught me the importance of designing an inclusive, fast, and user-friendly website.</p>
+
+            </section>
+
+            <section>
+                <h2 id="compliance"> Compliance</h2>
+                <p>For compliance, I ensured the website adhered to accessibility standards, including proper alt text for images, semantic HTML, and keyboard navigability. I also followed best practices for data privacy by avoiding the collection of sensitive user information. The design respects copyright laws by using royalty-free images and adhering to licensing agreements. This approach helped create a responsible, user-friendly website that meets legal and accessibility requirements.</p>
+
+                    
+            </section>
+
+            <section>
+                <h2 id="ref">References</h2>
+                <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
+                    <ul class="ref">
+                        <li>Unsplash (2025) <i>Unsplash.</i> Available at: <a href="https://unsplash.com">https://unsplash.com</a> (Last accessed: 9 March 2025).</li>
+                        <li>Pexels (2025) <i>Pexels.</i> Available at: <a href="https://www.pexels.com/">https://www.pexels.com/</a> (Last accessed: 9 March 2025).</li>
+
+                    </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside>
+            <h3>Core pages developed:</h3>
+
+        <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+            <ul class="top-level-ul">
+                <li>Student 2</li>
+                    <ul>
+                        <li><a href="#home">Home page </a></li>
+                        <li><a href="#table">Table page</a></li>
+                        <li><a href="#content">Content page</a></li>
+                    </ul>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+</div>
+
+<footer>
+    <div class="footer">
+        <p>&copy; 2025 Ocean Realm. All rights reserved.</p>
+        <p>
+            <a href="pageEditor_ST2.html">Page Editor Student 2</a> |
+            <a href="validation_ST2.html">Page validator Student 2</a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>

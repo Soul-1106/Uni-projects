@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage -->
+    <title>Ocean Realm</title>
+    
+    <!-- Redirects to home.html after 4 seconds -->
+    <meta http-equiv="refresh" content="4; url=home.html">
+    
+    <!-- Favicon for the webpage -->
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+    
+    <!-- Google Fonts for styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Global styles for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Styles for the background image container */
+        .image-container {
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat; 
+            height: 100vh;
+            margin: 0;
+            z-index: -1;
+            background-image: url('assets/background.png');
+        }
+
+        /* Styles for the text container */
+        .text-container {
+            position: absolute;
+            top: 20%;
+            color: #ffffff;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            box-sizing: content-box;
+            padding: 20px;
+            padding-left: 40px;
+            width: fit-content;
+        }
+
+        /* Styles for main heading */
+        h1 {
+            font-size: 50px;
+            font-weight: 600;
+            animation: fadeIn 1s ease-in-out backwards;
+            text-align: center;
+            padding-bottom: 6%;
+        }
+
+        /* Styles for secondary heading */
+        h2 {
+            font-size: 24px;
+            font-weight: 300;
+            animation: fadeIn 1s ease-in-out backwards;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Styles for tertiary heading */
+        h3 {
+            font-size: 20px;
+            font-weight: 300;
+            padding-bottom: 10px;
+            animation: fadeIn 1s ease-in-out backwards;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Styles for group members section */
+        #std-1-group-members {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 300;
+            animation: fadeIn 1s ease-in-out backwards;
+            line-height: 2.0;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Keyframes for fade-in animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Styles for the left sidebar */
+        .left {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            overflow-x: hidden;
+            padding-top: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        /* Styles for loading animation */
+        .loading {
+            position: fixed;
+            bottom: 7%;
+            left: 22.1%;
+        }
+
+        /* Styles for loading dots */
+        .dots {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+        }
+
+        /* Styles for individual loading dot */
+        .dot {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            border: 1px solid rgb(32, 36, 53);
+            background-color: rgb(74, 177, 172);
+            animation: jump 0.8s ease-in-out infinite alternate;
+        }
+
+        /* Animation delay for each dot */
+        .dot:nth-child(1) { animation-delay: 0s; }
+        .dot:nth-child(2) { animation-delay: 0.1s; }
+        .dot:nth-child(3) { animation-delay: 0.2s; }
+        .dot:nth-child(4) { animation-delay: 0.3s; }
+        .dot:nth-child(5) { animation-delay: 0.4s; }
+
+        /* Keyframes for jump animation */
+        @keyframes jump {
+            100% {
+                background-color: #9dffcc;
+                transform: translateY(-5rem) scale(1.9);
+            }
+        }
+
+        /* Styles for the page editor link container */
+        .page-editor-container {
+            position: absolute;
+            bottom: 22vh;
+            left: 47vh;
+        }
+
+        /* Styles for the page editor link */
+        .page-editor-container a {
+            text-decoration: none;
+            background: #4ab1ac;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        /* Hover effect for the page editor link */
+        .page-editor-container a:hover {
+            background: #9dffcc;
+            color: #003d3d;
+        }
+
+        /* Styles for the logo container */
+        .logo-top-left {
+            position: fixed;
+            z-index: 1000;
+            transform: translateX(-50%);
+            backdrop-filter: blur(20px);
+        }
+
+        /* Styles for the logo text */
+        .logo-top-left p {
+            position: fixed;
+            top: 4vh;
+            left: 6vw;
+            color: white;
+            font-size: 23px;
+            font-weight: 600;
+            width: 200px;
+        }
+
+        /* Styles for the logo image */
+        .logo-top-left img {
+            position: fixed;
+            top: 2vh;
+            left: 1.2vw;
+            width: 3.5vw;
+            height: 6vh;
+            border-radius: 50%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo and title section -->
+    <div class="logo-top-left">
+        <img src="assets/logo.png" alt="Ocean Realm Logo"/>
+        <p>Ocean Realm</p>
+    </div>
+
+    <!-- Left sidebar with welcome text -->
+    <div class="left">
+        <div class="text-container">
+            <h1>Welcome to Ocean Realm</h1>
+            <h2>To the life under the Ocean Realm</h2>
+            <h3>
+                To explore, celebrate, and protect marine life by raising awareness about the beauty and importance of life underwater.
+                Through education and conservation, we strive to safeguard our oceans for future generations.
+            </h3>
+            <p id="std-1-group-members"><b>Group members:</b><br>
+                Ahamed Haneef<br>
+                Sandaru Perera<br>
+                Nethul Jayasuriya<br>
+                Senuka Rodrigo<br>
+            </p>
+        </div>
+    </div>
+
+    <!-- Loading animation -->
+    <div class="loading">
+        <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <!-- Page editor link -->
+    <div class="page-editor-container">
+        <a href="pageEditor_ST1.html">Page Editor</a> 
+    </div>
+
+    <!-- Background image container -->
+    <div class="image-container"></div>
+
+</body>
+</html>

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title and favicon for the webpage -->
+    <title>Volunteer - Life Under Water</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+    
+    <!-- Link to external CSS stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        /* Styles for the background container */
+        .background-container {
+            flex-direction: column;
+        }
+
+        /* Styles for the volunteer cards section */
+        .volunteer-cards {
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            left: 10px;
+            top: 50px;
+        }
+
+        /* Styles for the heading of volunteer programs */
+        #heading {
+            position: relative;
+            top: 9vh;
+            left: 5vh;
+            font-size: 30px;
+            z-index: 2;
+        }
+
+        /* Styles for the card container that holds volunteer cards */
+        .card-container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            border-radius: 10px;
+            padding: 6vh;
+            backdrop-filter: blur(20px);
+            padding: 50px;
+            padding-top: 100px;
+        }
+
+        /* Styles for individual volunteer cards */
+        .volunteer-card {
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            height: 58vh;
+            width: 45vh;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 10px;
+            font-size: 45px;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            justify-content: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Background images for each volunteer card */
+        .volunteer-card:nth-child(1) {
+            background-image: url(assets/volunteer-image-1.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .volunteer-card:nth-child(2) {
+            background-image: url(assets/volunteer-image-2.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .volunteer-card:nth-child(3) {
+            background-image: url(assets/volunteer-image-3.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .volunteer-card:nth-child(4) {
+            background-image: url(assets/volunteer-image-4.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Styles for the card information overlay */
+        .card-info {
+            position: absolute;
+            top: 0;
+            right: -100%; 
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: right 0.3s ease-in-out;
+            font-size: 18px;
+        }
+
+        /* Show card info on hover */
+        .volunteer-card:hover .card-info {
+            right: 0; 
+        }
+
+        /* Styles for buttons within the card info */
+        .card-info button {
+            background: rgba(255, 255, 255, 0.9); 
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            margin-top: 15px;
+            padding: 12px 24px;
+            border-radius: 8px; 
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+
+        /* Hover effects for buttons */
+        .card-info button:hover {
+            background: #0077cc; 
+            color: white;
+            transform: translateY(-3px); 
+            box-shadow: 0 6px 12px rgba(0, 119, 204, 0.3); 
+        }
+
+        /* Active state for buttons */
+        .card-info button:active {
+            transform: translateY(1px);
+            box-shadow: 0 3px 6px rgba(0, 119, 204, 0.3);
+        }
+
+        /* Styles for the dropdown menu */
+        .dropdown {
+            position: absolute;
+            z-index: 10;
+            top: 9vh;
+            right: 10vh;
+        }
+
+        /* Styles for the dropdown button */
+        #dropdown-btn {
+            background: rgb(0, 0, 0);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        /* Styles for the dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 100px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styles for links in the dropdown */
+        .dropdown-content a {
+            display: block;
+            padding: 8px;
+            color: black;
+            text-decoration: none;
+        }
+
+        /* Show dropdown content on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Styles for the "view more" link */
+        #view-more {
+            position: absolute;
+            color: white;
+            font-size: 19px;
+            text-decoration: none;
+            right: 2vh;
+            transform: rotate(90deg);
+            z-index: 10;
+            top: 35vh;
+        }
+
+        /* Hover effect for the "view more" link */
+        #view-more:hover b {
+            background-color: rgb(0, 0, 0);
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Styles for the ratings and reviews form */
+        .ratings-reviews-and-feedback-form {
+            background-color: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            border: 1px solid black;
+            height: 70vh;
+            width: 80vw;
+            box-shadow: 1px 2px 5px rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+        }
+
+        /* Styles for the volunteer reviews heading */
+        #volunteer-heading {
+            position: relative;
+            font-size: 34px;
+            top: 5vh;
+            left: 3vh;
+        }
+
+        /* Styles for the rating container */
+        .rating-container {
+            position: absolute;
+            top: 15vh;
+            left: 20vh;
+            font-size: 44px;
+        }
+
+        /* Styles for rating container headings */
+        .rating-container h3 {
+            font-size: 30px;
+        }
+
+        /* Styles for rating container paragraphs */
+        .rating-container p {
+            position: relative;
+            font-size: 15px;
+            padding-top: 10px;
+        }
+
+        /* Styles for the review container */
+        .review-container {
+            position: absolute;
+            display: flex;
+            right: 40vh;
+            margin-top: 5vh;
+        }
+
+        /* Styles for individual review cards */
+        .review-card {
+            flex-direction: row;
+            margin: 50px 15px;
+            font-size: 17px;
+            line-height: 1.5;
+            height: 20vh;
+            width: 15vw;
+        }
+
+        /* Styles for links in review cards */
+        .review-card a {
+            color: #27c6ee;
+            position: relative;
+        }
+
+        /* Styles for spans in review cards */
+        .review-card span {
+            position: absolute;
+            padding-top: 10px;
+        }
+
+        /* Styles for the submission container */
+        .submission-container {
+            position: absolute;
+            bottom: 10vh;
+            right: 60vh;
+        }
+
+        /* Styles for the submission heading */
+        #review-heading {
+            position: absolute;
+            font-size: 30px;
+            top: -15px;
+        }
+
+        /* Styles for the submission container */
+        .submission-container {
+            position: absolute;
+            bottom: 5vh;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50vw;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Styles for the submission heading */
+        #submission-heading {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        /* Styles for the text area */
+        #text-area {
+            width: 100%;
+            height: 120px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            resize: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        /* Styles for rating buttons */
+        .rating-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        /* Styles for individual rating buttons */
+        .rating-buttons button {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            transition: transform 0.2s ease-in-out, background 0.3s;
+        }
+
+        /* Hover effect for rating buttons */
+        .rating-buttons button:hover {
+            background: #0077cc;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Styles for submit and cancel buttons */
+        .submit, .cancel {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Styles for submit button */
+        .submit {
+            background: #27c6ee;
+            color: white;
+        }
+
+        /* Hover effect for submit button */
+        .submit:hover {
+            background: #0077cc;
+        }
+
+        /* Styles for cancel button */
+        .cancel {
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+        /* Hover effect for cancel button */
+        .cancel:hover {
+            background: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Logo and navigation menu -->
+        <div class="logo-top-left">
+            <img src="assets/logo.png" alt=" Ocean Realm Logo"/>
+            <p>Ocean Realm</p>
+        </div>
+        <div class="navbar">
+            <nav class="navmenu">
+                <ul>
+                    <!-- Navigation links with hover cards -->
+                    <li>
+                        <a href="home.html">Home</a>
+                        <div class="hover-card">
+                            <h3>Home</h3>
+                            <p>Start your journey with us today!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="volunteer.html"> Volunteer</a>
+                        <div class="hover-card">
+                            <h3>Volunteer</h3>
+                            <p>Join hands to protect marine life!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="table.html"> Table</a>
+                        <div class="hover-card">
+                            <h3>Data Table</h3>
+                            <p>Uncover key insights & data trends.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="team.html">About us</a>
+                        <div class="hover-card">
+                            <h3>About Us</h3>
+                            <p>Meet the team behind our mission.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="feedback.html">Feedback</a>
+                        <div class="hover-card">
+                            <h3>Feedback</h3>
+                            <p>Share your thoughts—help us improve!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="profile.html">Your Profile</a>
+                        <div class="hover-card">
+                            <h3>Your Profile</h3>
+                            <p>View and manage your personal space.</p>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="background-container">
+        <section class="Volunteer-contents">
+            <div class="volunteer-cards">
+                <!-- Heading for volunteer programs -->
+                <h3 id="heading">Volunteer programs</h3>
+                <a href="#" id="view-more">view more <b>▲</b></a>
+                
+                <!-- Dropdown for sorting volunteer programs -->
+                <div class="dropdown">
+                    <button id="dropdown-btn">Sort ▼</button>
+                    <div class="dropdown-content">
+                        <a href="#">Most Popular</a>
+                        <a href="#">Most Viewed</a>
+                        <a href="#">Recent</a>
+                    </div>
+                </div>
+                
+                <!-- Container for volunteer cards -->
+                <div class="card-container">
+                    <!-- Individual volunteer cards with information -->
+                    <div class="volunteer-card">
+                        Save our Shores
+                        <div class="card-info">
+                            <p>A community-driven nonprofit that organizes beach cleanups, educational programs, and advocacy efforts to protect coastal ecosystems.</p>
+                            <button>Join Now</button>
+                        </div>
+                    </div>
+
+                    <div class="volunteer-card">
+                        Reef Conservation
+                        <div class="card-info">
+                            <p>A global initiative that trains volunteers to monitor coral reef health, collect scientific data, and promote sustainable ocean conservation.</p>
+                            <button>Join Now</button>
+                        </div>
+                    </div>
+
+                    <div class="volunteer-card"> 
+                        Bimini Shark Lab
+                        <div class="card-info">
+                            <p>A research station where volunteers assist in shark tagging, behavioral studies, and marine ecosystem monitoring.</p>
+                            <button>Join Now</button>
+                        </div>
+                    </div>
+
+                    <div class="volunteer-card">
+                        Turtle Nest Patrol
+                        <div class="card-info">
+                            <p>Volunteering program where volunteers help monitor nesting beaches, protect turtle nests from poachers, and collect scientific data to support sea turtle conservation.</p>
+                            <button>Join Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ratings-reviews-and-feedback-form-section">
+            <div class="ratings-reviews-and-feedback-form">
+                <!-- Heading for volunteer reviews -->
+                <h2 id="volunteer-heading">Volunteer Reviews</h2>
+                
+                <!-- Rating display -->
+                <div class="rating-container">
+                    <h2 id="rating-number">9.4/10 </h2>
+                    <h3>Exceptional</h3>
+                    <p>Based on 150 reviews</p>
+                </div>
+                
+                <!-- Recent reviews-->
+                <div class="review-container">
+                     <!-- Heading for recent reviews -->
+                    <p id="review-heading">Recent reviews</p>
+                     <!-- Individual review card for the first review -->
+                    <div class="review-card">
+                        <h4>"Amazing Experience!" - 10/10</h4>
+                        <p>Helping marine life was life-changing! </p>
+                        <a href="#">See More</a><br>
+                        <span>- Alex M., Feb 2025</span><br>
+                    </div>
+
+                     <!-- Individual review card for the second review -->
+                    <div class="review-card">
+                        <h4>"Great Initiative" - 9/10</h4>
+                        <p>Well-organized and impactful. </p>
+                        <a href="#">See More </a> <br>
+                        <span>- Jamie R., Jan 2025</span> <br>
+                        
+                    </div>
+                </div>
+                <!-- Submission container for user reviews -->
+                <div class="submission-container">
+                    <h2 id="submission-heading">Submit Your Review</h2>
+
+                     <!-- Text area for users to write their review -->
+                    <textarea placeholder="Write your review here..." id="text-area"></textarea>
+
+                    <!-- Rating buttons for user feedback -->
+                    <div class="rating-buttons">
+                        <button>😀</button>
+                        <button>😊</button>
+                        <button>😐</button>
+                        <button>☹️</button>
+                        <button>😡</button>
+                    </div>
+
+                    <!-- Buttons for submitting or canceling the review -->
+                    <button class="submit">Submit Feedback</button>
+                    <button class="cancel">Cancel</button>
+                </div>
+                
+            </div>
+        </section>
+
+    </div>
+    
+    
+    <!-- Footer section of the webpage -->
+    <footer>
+        <div class="footer">
+            <p>&copy; 2025 Ocean Realm. All rights reserved.</p>
+            <p>
+                <a href="pageEditor_ST1.html">Page Editor</a> |
+                <a href="validation_ST1.html">Page Validator</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

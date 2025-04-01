@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Ocean Realm</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* main container */
+        .container {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        /* button */
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 180px;
+            margin: 20px;
+            padding: 15px;
+            background-color: white;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        /* button hover animation */
+        .button:hover {
+            background-color: lightgray;
+        }
+        /* structure of the site */
+        .structure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* horzontal buttons */
+        .horizontal {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        /* Vertical buttons */
+        .vertical {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* .vertical lines */
+        .svg-vertical {
+            position: absolute;
+            top: 68px;
+            ;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 200px;
+            pointer-events: none;
+        }
+        /* horizontal lines */
+        .svg-horizontal {
+            position: absolute;
+            top: 259px;
+            left: 20%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 39%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- main content with background container -->
+    <div class="background-container">
+        <h1>Ocean Realm</h1>
+        <div class="structure">
+            <div>
+                <a href="#" class="button">Ocean Realm</a>
+            </div>
+            <!-- horizontal buttons -->
+            <div class="horizontal" style="margin-top:95px;">
+                <a href="home.html" class="button" id="home">Home</a>
+                <a href="volunteer.html" class="button">Volunteer</a>
+                <a href="table.html" class="button">Table</a>
+                <a href="team.html" class="button">Team</a>
+                <a href="feedback.html" class="button">Feedback</a>
+                <a href="profile.html" class="button">Your Profile</a>
+            </div>
+            <!-- vertical lines class -->
+            <svg class="svg-vertical">
+                <!-- vertical lines positioning -->
+                <line x1="46%" y1="6px" x2="46%" y2="100px" stroke="white" stroke-width="2" />
+
+
+                <line x1="16%" y1="100px" x2="75%" y2="100px" stroke="white" stroke-width="2" />
+
+
+                <line x1="16%" y1="100px" x2="16%" y2="140px" stroke="white" stroke-width="2" />
+                <line x1="28%" y1="100px" x2="28%" y2="140px" stroke="white" stroke-width="2" />
+                <line x1="41%" y1="100px" x2="41%" y2="140px" stroke="white" stroke-width="2" />
+                <line x1="51%" y1="100px" x2="51%" y2="140px" stroke="white" stroke-width="2" />
+                <line x1="64%" y1="100px" x2="64%" y2="140px" stroke="white" stroke-width="2" />
+                <line x1="75%" y1="100px" x2="75%" y2="140px" stroke="white" stroke-width="2" />
+            </svg>
+            <!-- horizontal line class -->
+            <svg class="svg-horizontal">
+                <!-- horizontal line positioning -->
+
+                <line x1="25px" y1="100%" x2="25px" y2="0%" stroke="white" stroke-width="2" />
+
+                <line x1="25px" y1="22%" x2="200px" y2="22%" stroke="white" stroke-width="2" />
+                <line x1="25px" y1="47%" x2="200px" y2="47%" stroke="white" stroke-width="2" />
+                <line x1="25px" y1="74%" x2="200px" y2="74%" stroke="white" stroke-width="2" />
+                <line x1="25px" y1="100%" x2="200px" y2="100%" stroke="white" stroke-width="2" />
+
+            </svg>
+
+                <!-- vertical buttons -->
+            <div class="vertical" style="margin-right: 780px; margin-top: 20px;">
+                <a href="content_ST1.html" class="button">Content Page 01</a>
+                <a href="content_ST2.html" class="button">Content Page 02</a>
+                <a href="content_ST3.html" class="button">Content Page 03</a>
+                <a href="content_ST4.html" class="button">Content Page 04</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

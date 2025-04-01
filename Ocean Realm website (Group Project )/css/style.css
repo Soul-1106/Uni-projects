@@ -1,0 +1,174 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    color: white;
+    overflow-x: hidden;
+
+}
+
+
+.background-container {
+    position: relative;
+    background: url('../assets/background.png') no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.navbar {
+    position: fixed;
+    top: 2vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    backdrop-filter: blur(20px);
+    border-radius: 255px;
+    z-index: 1000;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2vw;
+    margin-bottom: 10vh;
+}
+
+.navmenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navmenu ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navmenu li {
+    display: inline-block;
+    position: relative;
+}
+
+.navmenu a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+.navmenu a:hover {
+    background: rgba(255, 255, 255, 0.308);
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+/* 📌 Hover Cards */
+.hover-card {
+    position: absolute;
+    background: #88e3e3;
+    color: rgb(255, 255, 255);
+    padding: 2vh 2vw;
+    border-radius: 12px;
+    width: 12.5vw;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.hover-card h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #001314;
+}
+
+.hover-card p {
+    margin: 0;
+    font-size: 16px;
+    color: #1b4c4e;
+}
+
+.navmenu ul li:hover .hover-card {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.navmenu ul li .hover-card {
+    margin-top: 12px;
+}
+
+
+.logo-top-left {
+    position: fixed;
+    z-index: 1000;
+    transform: translateX(-50%);
+    backdrop-filter: blur(20px);
+}
+
+.logo-top-left p {
+    position: fixed;;
+    top: 4vh;
+    left: 6vw;
+    color: white;
+    font-size: 23px;
+    font-weight: 600;
+    width: 200px;
+}
+
+.logo-top-left img {
+    position: fixed;
+    top: 2vh;
+    left: 1.2vw;
+    width: 3.5vw;
+    height: 6vh;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    bottom: 0px;
+    position: relative;
+    text-align: center;
+    background-color:  #175e69;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 16px;
+
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
